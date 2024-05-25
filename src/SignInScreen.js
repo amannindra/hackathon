@@ -22,7 +22,8 @@ const uiConfig = {
     // We will display Google and Facebook as auth providers.
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID
+      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
     callbacks: {
       // Avoid redirects after sign-in.
@@ -39,7 +40,8 @@ const uiConfig = {
       });
       return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.
     }, []);
-  
+    
+
     if (!props.isSignedIn) {
       return (
         <div>
@@ -52,10 +54,18 @@ const uiConfig = {
     return (
         <div className='h-full w-full backdrop-blur-sm'>
             <div className="place-delf-center">
-                <h1>My App</h1>
+                <h1>WeCom Donation Submissionn</h1>
                 <p>Welcome {firebase.auth().currentUser.displayName}! You are now signed-in!</p>
-                <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+                <a onClick={() => firebase.auth().signOut()}>Sign-out</a> <br></br>
+
+
+
             </div>
+
+            <div>
+
+            </div>
+
         </div>
     );
   }
