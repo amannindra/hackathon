@@ -25,6 +25,10 @@ html, body, .App {
   justify-content: center;
 }
 
+#header {
+  
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
